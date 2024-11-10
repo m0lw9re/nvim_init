@@ -80,6 +80,7 @@ Plug 'rodjek/vim-puppet'                       " Puppet syntax highlighting
 Plug 'tclh123/vim-thrift'                      " Thrift syntax highlighting
 Plug 'zchee/deoplete-go', { 'do': 'make'}      " Go auto completion
 Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
+Plug 'uiiaoo/java-syntax.vim'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'branch': 'release/0.x',
@@ -736,7 +737,8 @@ let g:delve_backend = "native"
 " Below you can disable default snippets for specific languages. If you set the
 " language to _ it sets the default for all languages.
 let g:neosnippet#disable_runtime_snippets = {
-    \ 'go': 1
+    \ 'go': 1,
+    \ 'java': 1
 \}
 
 " Keybindings

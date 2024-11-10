@@ -9,6 +9,14 @@ dap.listeners.before.event_exited["dapui_config"]=function()
   dapui.close()
 end
 
+-- treesitter
+require "nvim-treesitter.configs".setup {
+  highlight = {
+    enable = true, -- false will disable the whole extension
+    disable = { "java" }, -- list of language that will be disabled
+  },
+}
+
 -- utils
 
 local M = {}
@@ -191,6 +199,7 @@ end
 -- The on_attach function is used to set key maps after the language server
 -- attaches to the current buffer
 local on_attach = function(client, bufnr)
+  client.server_capabilities.semanticTokensProvider = nil
   if client.name == "jdtls" then
           jdtls = require("jdtls")
           jdtls.setup_dap({ hotcodereplace = "auto" })
@@ -321,7 +330,7 @@ local config = {
   -- See: https://github.com/eclipse/eclipse.jdt.ls#running-from-the-command-line
   -- for the full list of options
   cmd = {
-    vim.fn.glob(home ... "/tools/jdt-language-server/bin/jdtls"),
+    vim.fn.glob(home .. "/tools/jdt-language-server/bin/jdtls"),
     home .. "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
     '-Declipse.application=org.eclipse.jdt.ls.core.id1',
     '-Dosgi.bundles.defaultStartLevel=4',
