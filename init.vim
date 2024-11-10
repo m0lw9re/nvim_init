@@ -125,6 +125,12 @@ Plug 'mikelue/vim-maven-plugin'
 "Plug 'simrat39/rust-tools.nvim'
 "Plug 'neovim/nvim-lspconfig'
 
+"Dart/Flutter
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
+
 call plug#end()
 
 "----------------------------------------------
@@ -1129,5 +1135,13 @@ au FileType java set expandtab
 au FileType java set shiftwidth=2
 au FileType java set softtabstop=2
 au FileType java set tabstop=2
+
+"----------------------------------------------
+" Language: Dart
+"----------------------------------------------
+au FileType dart set expandtab
+au FileType dart set shiftwidth=2
+au FileType dart set softtabstop=2
+au FileType dart set tabstop=2
 
 set completefunc=emoji#completem
