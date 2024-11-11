@@ -1,0 +1,5 @@
+{
+    "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64"
+    "java.jdt.ls.vmargs": "-javaagent:/home/m0lw9re/.config/coc/extensions/node_modules/coc-java/lombok/lombok-1.18.34.jar"
+    "java.configuration.updateBuildConfiguration": "interactive"
+}
