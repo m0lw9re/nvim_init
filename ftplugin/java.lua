@@ -24,7 +24,6 @@ function nnoremap(rhs, lhs, bufopts, desc)
   vim.keymap.set("n", rhs, lhs, bufopts)
 end
 
-
 -- The on_attach function is used to set key maps after the language server
 -- attaches to the current buffer
 local on_attach = function(client, bufnr)
@@ -163,6 +162,7 @@ local config = {
     -- The configuration for jdtls is also placed where jdtls was installed. This will
     -- need to be updated depending on your environment
     '-configuration', home .. '/tools/jdt-language-server/config_linux',
+
     -- Use the workspace_folder defined above to store data for this project
     '-data', workspace_folder,
   },

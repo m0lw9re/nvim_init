@@ -170,16 +170,4 @@ dap.configurations.rust = {
   },
 }
 
--- config telescope
-local telescope = require('telescope')
-telescope.load_extension('dap')
-
-local map = vim.keymap.set
-local tsbuiltin = require('telescope.builtin')
-
-map('n', '<leader>b', tsbuiltin.buffers, {
-  noremap=true, silent=true
-})
-map('n', '<leader>o', tsbuiltin.oldfiles, {})
-
 require("ibl").setup()
