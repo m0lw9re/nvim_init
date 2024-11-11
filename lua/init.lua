@@ -330,8 +330,8 @@ local config = {
   -- See: https://github.com/eclipse/eclipse.jdt.ls#running-from-the-command-line
   -- for the full list of options
   cmd = {
-    vim.fn.glob(home .. "/tools/jdt-language-server/bin/jdtls"),
-    home .. "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+    vim.fn.glob(home .. '/tools/jdt-language-server/bin/jdtls'),
+    '/usr/lib/jvm/java-17-openjdk-amd64/bin/java',
     '-Declipse.application=org.eclipse.jdt.ls.core.id1',
     '-Dosgi.bundles.defaultStartLevel=4',
     '-Declipse.product=org.eclipse.jdt.ls.core.product',
