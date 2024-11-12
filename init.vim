@@ -84,7 +84,7 @@ Plug 'uiiaoo/java-syntax.vim'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'branch': 'release/0.x',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'java']
   \ }                                          " Formatting for frontend like js, ts, html ...
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
@@ -633,7 +633,8 @@ let g:calendar_view = "days"                  " Set days as the default view
 "----------------------------------------------
 " Plugin: 'junegunn/fzf.vim'
 "----------------------------------------------
-nnoremap <c-p> :FZF<cr>
+nnoremap <C-[> :FZF<cr>
+nnoremap <c-p> :GFiles<cr>
 
 "----------------------------------------------
 " Plugin: 'majutsushi/tagbar'
@@ -791,7 +792,7 @@ let g:deoplete#sources#go#unimported_packages = 0
 nmap <Leader>py <Plug>(Prettier)
 
 let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
+let g:prettier#autoformat_require_pragma = 1
 let g:prettier#quickfix_enabled = 0
 let g:prettier#partial_format=1
 let g:prettier#quickfix_auto_focus = 0
